@@ -21,7 +21,7 @@ func DiscordConnector(toActions chan<- dosbot.Event, toChannel <-chan dosbot.Eve
 		panic(err)
 	}
 
-	bot := newBot(user.Username, user.ID)
+	bot := newBot(user.Username, user.ID, discord)
 
 	// Input from Discord
 	discord.AddHandler(handleMessageCreate(bot, toActions))
