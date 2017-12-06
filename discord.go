@@ -26,10 +26,10 @@ func DiscordConnector(toActions chan<- dosbot.Event, toChannel <-chan dosbot.Eve
 	// Input from Discord
 	discord.AddHandler(handleMessageCreate(bot, toActions))
 
-	// Output to Dsicord
+	// Output to Discord
 	go func() {
 		for event := range toChannel {
-			_, err := discord.ChannelMessageSend(event.Room().ID().(string), event.Message())
+			err := event.Error()
 
 			if err != nil {
 				panic(err)
