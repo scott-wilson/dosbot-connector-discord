@@ -1,5 +1,5 @@
 hash: d64f5befb03578d741755d0104df6c2684a39f3a60f3fbf80047171d23c5e6cd
-updated: 2017-11-29T22:10:31.70501852-08:00
+updated: 2017-12-05T22:10:55.941974256-08:00
 imports:
 - name: github.com/bwmarrin/discordgo
   version: 2fda7ce223a66a5b70b66987c22c3c94d022ee66
@@ -25,7 +25,7 @@ imports:
 - name: github.com/pelletier/go-toml
   version: 4e9e0ee19b60b13eb79915933f44d8ed5f268bdd
 - name: github.com/scott-wilson/dosbot
-  version: d9cd7752e0a2805ae6e9f0c62f7391ffc4e927a9
+  version: f62144d27ffd93dbad579cd3f8ca610e19834012
 - name: github.com/spf13/afero
   version: 8d919cbe7e2627e417f3e45c3c0e489a5b7e2536
   subpackages:
@@ -45,11 +45,11 @@ imports:
   - poly1305
   - salsa20/salsa
 - name: golang.org/x/sys
-  version: 13fcbd661c8ececa8807a29b48407d674b1d8ed8
+  version: 8b4580aae2a0dd0c231a45d3ccb8434ff533b840
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: 572a2b141f625f4360cf42a41a43622067e0510b
+  version: 57961680700a5336d15015c8c50686ca5ba362a4
   subpackages:
   - transform
   - unicode/norm
