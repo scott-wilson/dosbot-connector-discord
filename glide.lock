@@ -1,8 +1,8 @@
 hash: d64f5befb03578d741755d0104df6c2684a39f3a60f3fbf80047171d23c5e6cd
-updated: 2017-12-05T22:10:55.941974256-08:00
+updated: 2018-01-07T16:53:18.263340556-08:00
 imports:
 - name: github.com/bwmarrin/discordgo
-  version: 2fda7ce223a66a5b70b66987c22c3c94d022ee66
+  version: 4a33b9bc7c56cfdb9bb244e33e83cb3941fe2bdc
 - name: github.com/fsnotify/fsnotify
   version: 4da3e2cfbabc9f751898f250b49f2439785783a1
 - name: github.com/gorilla/websocket
@@ -25,7 +25,7 @@ imports:
 - name: github.com/pelletier/go-toml
   version: 4e9e0ee19b60b13eb79915933f44d8ed5f268bdd
 - name: github.com/scott-wilson/dosbot
-  version: f62144d27ffd93dbad579cd3f8ca610e19834012
+  version: ea308dbbd6abcca3acf15a03a36351b6d5261698
 - name: github.com/spf13/afero
   version: 8d919cbe7e2627e417f3e45c3c0e489a5b7e2536
   subpackages:
@@ -45,7 +45,7 @@ imports:
   - poly1305
   - salsa20/salsa
 - name: golang.org/x/sys
-  version: 8b4580aae2a0dd0c231a45d3ccb8434ff533b840
+  version: 9167dbfd0f8e88b731dd88cbf73a270701a37bb4
   subpackages:
   - unix
 - name: golang.org/x/text
