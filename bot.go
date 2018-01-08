@@ -2,6 +2,7 @@ package discord
 
 import (
 	"fmt"
+	"log"
 	"regexp"
 
 	"github.com/bwmarrin/discordgo"
@@ -38,23 +39,27 @@ func (b Bot) Session() *discordgo.Session {
 }
 
 func (b Bot) SendMessage(room dosbot.Room, message string) error {
+	log.Printf("Sending message.\n\tRoom: %#v\n\tMessage: %s\n", room, message)
 	_, err := b.session.ChannelMessageSend(room.ID().(string), message)
 	return err
 }
 
 func (b Bot) SendDirectMessage(room dosbot.Room, user dosbot.User, message string) error {
+	log.Printf("Sending direct message.\n\tRoom: %#v\n\tUser: %#v\n\tMessage: %s\n", room, user, message)
 	message = fmt.Sprintf("<@%s> %s", user.ID().(string), message)
 	_, err := b.session.ChannelMessageSend(room.ID().(string), message)
 	return err
 }
 
 func (b Bot) SendEmote(room dosbot.Room, message string) error {
+	log.Printf("Sending emote.\n\tRoom: %#v\n\tMessage: %s\n", room, message)
 	message = fmt.Sprintf("_%s_", message)
 	_, err := b.session.ChannelMessageSend(room.ID().(string), message)
 	return err
 }
 
 func (b Bot) SendPrivateMessage(user dosbot.User, message string) error {
+	log.Printf("Sending private message.\n\tUser: %#v\n\tMessage: %s\n", user, message)
 	channel, err := b.session.UserChannelCreate(user.ID().(string))
 
 	if err != nil {
@@ -67,6 +72,7 @@ func (b Bot) SendPrivateMessage(user dosbot.User, message string) error {
 }
 
 func (b Bot) SendPrivateEmote(user dosbot.User, message string) error {
+	log.Printf("Sending private emote.\n\tUser: %#v\n\tMessage: %s\n", user, message)
 	message = fmt.Sprintf("_%s_", message)
 	channel, err := b.session.UserChannelCreate(user.ID().(string))
 
